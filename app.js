@@ -1,46 +1,35 @@
-// ======================================================
-// LifeShield AI Dashboard
+// ==========================================================
+// LifeShield Dashboard
 // app.js
-// Part 1
-// ======================================================
+// ==========================================================
 
 document.addEventListener("DOMContentLoaded", () => {
 
     initLoader();
 
-    initGreeting();
-
     initDarkMode();
 
-    initClock();
+    initMobileMenu();
 
-    initSearch();
+    initScrollAnimation();
 
-    initChart();
+    initProgressBars();
 
-    initProgressBar();
+    initCounters();
 
-    initCounter();
-
-    initReveal();
-
-    initFeatureCards();
-
-    initQuickActions();
-
-    initFloatingAI();
+    initCards();
 
     initNotifications();
 
 });
 
-// ======================================================
-// Loader
-// ======================================================
+// ==========================================================
+// LOADER
+// ==========================================================
 
 function initLoader(){
 
-    const loader = document.querySelector(".loader");
+    const loader=document.querySelector(".loader");
 
     if(!loader) return;
 
@@ -48,103 +37,29 @@ function initLoader(){
 
         loader.style.opacity="0";
 
-        loader.style.pointerEvents="none";
+        loader.style.visibility="hidden";
 
         setTimeout(()=>{
 
             loader.remove();
 
-        },600);
+        },500);
 
     });
 
 }
 
-// ======================================================
-// Greeting
-// ======================================================
-
-function initGreeting(){
-
-    const title=document.querySelector(".welcome h1");
-
-    if(!title) return;
-
-    const hour=new Date().getHours();
-
-    let greeting="Good Morning";
-
-    if(hour>=12 && hour<18){
-
-        greeting="Good Afternoon";
-
-    }
-
-    if(hour>=18){
-
-        greeting="Good Evening";
-
-    }
-
-    title.innerHTML=`${greeting}, Isaac 👋`;
-
-}
-
-// ======================================================
-// Live Clock
-// ======================================================
-
-function initClock(){
-
-    const p=document.querySelector(".welcome p");
-
-    if(!p) return;
-
-    const clock=document.createElement("div");
-
-    clock.className="live-clock";
-
-    p.after(clock);
-
-    function update(){
-
-        const now=new Date();
-
-        clock.innerHTML=
-
-        now.toLocaleString("en-SG",{
-
-            weekday:"long",
-
-            day:"numeric",
-
-            month:"long",
-
-            hour:"2-digit",
-
-            minute:"2-digit"
-
-        });
-
-    }
-
-    update();
-
-    setInterval(update,1000);
-
-}
-
-// ======================================================
-// Dark Mode
-// ======================================================
+// ==========================================================
+// DARK MODE
+// ==========================================================
 
 function initDarkMode(){
 
-    const btn=document.querySelector(".darkMode");
+    const btn=document.getElementById("darkToggle");
 
     if(!btn) return;
 
-    if(localStorage.getItem("lifeshield-theme")==="dark"){
+    if(localStorage.getItem("theme")==="dark"){
 
         document.body.classList.add("dark");
 
@@ -158,55 +73,69 @@ function initDarkMode(){
 
         const dark=document.body.classList.contains("dark");
 
-        btn.innerHTML=dark
-
-        ?'<i class="fa-solid fa-sun"></i>'
-
-        :'<i class="fa-solid fa-moon"></i>';
-
         localStorage.setItem(
 
-            "lifeshield-theme",
+            "theme",
 
-            dark?"dark":"light"
+            dark ? "dark" : "light"
 
         );
+
+        btn.innerHTML=dark
+
+            ? '<i class="fa-solid fa-sun"></i>'
+
+            : '<i class="fa-solid fa-moon"></i>';
 
     });
 
 }
 
-// ======================================================
-// Search
-// ======================================================
+// ==========================================================
+// MOBILE MENU
+// ==========================================================
 
-function initSearch(){
+function initMobileMenu(){
 
-    const input=document.querySelector(".search input");
+    const menu=document.querySelector(".menu-btn");
 
-    if(!input) return;
+    const mobile=document.querySelector(".mobile-menu");
 
-    input.addEventListener("keyup",(e)=>{
+    if(!menu || !mobile) return;
 
-        const keyword=e.target.value.toLowerCase();
+    menu.addEventListener("click",()=>{
 
-        document.querySelectorAll(
+        mobile.classList.toggle("show");
 
-            ".transactions tbody tr"
+    });
 
-        ).forEach(row=>{
+}
 
-            row.style.display=
+// ==========================================================
+// CARD HOVER EFFECT
+// ==========================================================
 
-            row.innerText
+function initCards(){
 
-            .toLowerCase()
+    document
 
-            .includes(keyword)
+    .querySelectorAll(
 
-            ?"table-row"
+        ".card,.overview-card,.action-card,.policy-card"
 
-            :"none";
+    )
+
+    .forEach(card=>{
+
+        card.addEventListener("mouseenter",()=>{
+
+            card.style.transform="translateY(-8px)";
+
+        });
+
+        card.addEventListener("mouseleave",()=>{
+
+            card.style.transform="";
 
         });
 
@@ -214,105 +143,55 @@ function initSearch(){
 
 }
 
-// ======================================================
-// Progress Bar
-// ======================================================
+// ==========================================================
+// NOTIFICATION BUTTON
+// ==========================================================
 
-function initProgressBar(){
+function initNotifications(){
 
-    const bar=document.querySelector(".progress-fill");
+    const bell=document.querySelector(".notification-btn");
 
-    if(!bar) return;
+    if(!bell) return;
 
-    bar.style.width="0%";
+    bell.addEventListener("click",()=>{
 
-    setTimeout(()=>{
+        toast("No new notifications");
 
-        bar.style.transition="width 1.5s ease";
-
-        bar.style.width="74%";
-
-    },400);
+    });
 
 }
 
-// ======================================================
-// Animated Balance Counter
-// ======================================================
+// ==========================================================
+// SCROLL ANIMATION
+// ==========================================================
 
-function initCounter(){
+function initScrollAnimation(){
 
-    const balance=document.querySelector(".account-right h3");
+    const elements=document.querySelectorAll(
 
-    if(!balance) return;
-
-    let start=0;
-
-    const end=56850;
-
-    const duration=1800;
-
-    const increment=end/(duration/16);
-
-    const timer=setInterval(()=>{
-
-        start+=increment;
-
-        if(start>=end){
-
-            start=end;
-
-            clearInterval(timer);
-
-        }
-
-        balance.innerHTML=
-
-        "$"+
-
-        Math.floor(start)
-
-        .toLocaleString();
-
-    },16);
-
-}
-
-// ======================================================
-// Scroll Reveal
-// ======================================================
-
-function initReveal(){
-
-    const observer=new IntersectionObserver(
-
-        entries=>{
-
-            entries.forEach(entry=>{
-
-                if(entry.isIntersecting){
-
-                    entry.target.classList.add("fade-up");
-
-                }
-
-            });
-
-        },
-
-        {
-
-            threshold:.15
-
-        }
+        ".card,.overview-card,.action-card,.policy-card,.hero-left,.balance-card"
 
     );
 
-    document.querySelectorAll(
+    const observer=new IntersectionObserver((entries)=>{
 
-        ".card,.feature,.quick-card,.activity-item"
+        entries.forEach(entry=>{
 
-    ).forEach(el=>{
+            if(entry.isIntersecting){
+
+                entry.target.classList.add("animate");
+
+            }
+
+        });
+
+    },{
+
+        threshold:.15
+
+    });
+
+    elements.forEach(el=>{
 
         observer.observe(el);
 
@@ -320,9 +199,63 @@ function initReveal(){
 
 }
 
-// ======================================================
-// Toast
-// ======================================================
+// ==========================================================
+// PROGRESS BAR ANIMATION
+// ==========================================================
+
+function initProgressBars(){
+
+    const bars=document.querySelectorAll(".progress-bar");
+
+    bars.forEach(bar=>{
+
+        const width=bar.style.width;
+
+        bar.style.width="0";
+
+        setTimeout(()=>{
+
+            bar.style.width=width;
+
+        },300);
+
+    });
+
+}
+
+// ==========================================================
+// COUNTER ANIMATION
+// ==========================================================
+
+function initCounters(){
+
+    document.querySelectorAll(".health-score").forEach(counter=>{
+
+        const target=parseInt(counter.innerText);
+
+        let current=0;
+
+        const timer=setInterval(()=>{
+
+            current++;
+
+            counter.innerText=current;
+
+            if(current>=target){
+
+                clearInterval(timer);
+
+            }
+
+        },18);
+
+    });
+
+}
+
+// ==========================================================
+// TOAST NOTIFICATION
+// ==========================================================
 
 function toast(message){
 
@@ -330,7 +263,13 @@ function toast(message){
 
     toast.className="toast";
 
-    toast.innerHTML=message;
+    toast.innerHTML=`
+
+        <i class="fa-solid fa-circle-check"></i>
+
+        <span>${message}</span>
+
+    `;
 
     document.body.appendChild(toast);
 
@@ -354,633 +293,132 @@ function toast(message){
 
 }
 
-// ======================================================
-// Feature Cards
-// ======================================================
+// ==========================================================
+// SMOOTH SCROLL
+// ==========================================================
 
-function initFeatureCards(){
+document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
 
-    const cards=document.querySelectorAll(".feature");
+    anchor.addEventListener("click",function(e){
 
-    cards.forEach(card=>{
+        const target=document.querySelector(
 
-        card.addEventListener("click",()=>{
+            this.getAttribute("href")
 
-            cards.forEach(c=>c.classList.remove("active"));
+        );
 
-            card.classList.add("active");
+        if(!target) return;
 
-            toast(`✅ ${card.querySelector("h3").innerText}`);
+        e.preventDefault();
 
-        });
+        target.scrollIntoView({
 
-    });
+            behavior:"smooth",
 
-}
-
-// ======================================================
-// Quick Actions
-// ======================================================
-
-function initQuickActions(){
-
-    document.querySelectorAll(".quick-card")
-
-    .forEach(card=>{
-
-        card.addEventListener("click",()=>{
-
-            const action=
-
-            card.querySelector("span").innerText;
-
-            toast(`🚀 ${action} coming soon`);
+            block:"start"
 
         });
 
     });
 
-}
-
-// ======================================================
-// Floating AI Button
-// ======================================================
-
-function initFloatingAI(){
-
-    const btn=document.querySelector(".floating-ai");
-
-    if(!btn) return;
-
-    btn.addEventListener("click",()=>{
-
-        const assistant=document.querySelector(".assistant-card");
-
-        if(assistant){
-
-            assistant.scrollIntoView({
-
-                behavior:"smooth",
-
-                block:"start"
-
-            });
-
-        }
-
-    });
-
-}
-
-// ======================================================
-// Notification Bell
-// ======================================================
-
-function initNotifications(){
-
-    const bell=document.querySelector(".icon-btn");
-
-    if(!bell) return;
-
-    bell.addEventListener("click",()=>{
-
-        toast("🔔 3 new notifications");
-
-    });
-
-}
-
-// ======================================================
-// Doughnut Chart
-// ======================================================
-
-function initChart(){
-
-    const canvas=document.getElementById("expenseChart");
-
-    if(!canvas) return;
-
-    new Chart(canvas,{
-
-        type:"doughnut",
-
-        data:{
-
-            labels:[
-
-                "Housing",
-
-                "Food",
-
-                "Transport",
-
-                "Insurance"
-
-            ],
-
-            datasets:[{
-
-                data:[
-
-                    850,
-
-                    620,
-
-                    364,
-
-                    290
-
-                ],
-
-                backgroundColor:[
-
-                    "#E30613",
-
-                    "#ff6c82",
-
-                    "#3B82F6",
-
-                    "#22C55E"
-
-                ],
-
-                borderWidth:0,
-
-                hoverOffset:12
-
-            }]
-
-        },
-
-        options:{
-
-            responsive:true,
-
-            cutout:"72%",
-
-            plugins:{
-
-                legend:{
-
-                    display:false
-
-                }
-
-            }
-
-        }
-
-    });
-
-}
-
-// ======================================================
-// AI Tips Rotation
-// ======================================================
-
-const aiTips=[
-
-"💡 Save 20% of every paycheck.",
-
-"📈 Investment portfolio grew this month.",
-
-"🏠 Housing expenses remain healthy.",
-
-"🚗 Transport spending decreased.",
-
-"💳 Credit utilisation is excellent.",
-
-"🛡 Insurance coverage is fully updated."
-
-];
-
-let tipIndex=0;
-
-setInterval(()=>{
-
-    const list=document.querySelector(".ai-card ul");
-
-    if(!list) return;
-
-    list.firstElementChild.innerHTML=
-
-    aiTips[tipIndex];
-
-    tipIndex++;
-
-    if(tipIndex>=aiTips.length){
-
-        tipIndex=0;
-
-    }
-
-},6000);
-
-// ======================================================
-// Fake Live Balance
-// ======================================================
-
-setInterval(()=>{
-
-    const balance=document.querySelector(".account-right h3");
-
-    if(!balance) return;
-
-    const current=parseInt(
-
-        balance.innerText
-
-        .replace(/\$|,/g,"")
-
-    );
-
-    const change=Math.floor(Math.random()*30)-15;
-
-    const updated=current+change;
-
-    balance.innerHTML=
-
-    "$"+updated.toLocaleString();
-
-},7000);
-
-// ======================================================
-// Keyboard Shortcut
-// CTRL + /
-// ======================================================
-
-document.addEventListener("keydown",(e)=>{
-
-    if(e.ctrlKey && e.key==="/"){
-
-        const search=document.querySelector(".search input");
-
-        if(search){
-
-            search.focus();
-
-        }
-
-    }
-
 });
 
-// ======================================================
-// Avatar Click
-// ======================================================
+// ==========================================================
+// ACCOUNT CARD CLICK
+// ==========================================================
 
-const avatar=document.querySelector(".avatar");
+document.querySelectorAll(".account-item").forEach(card=>{
 
-if(avatar){
+    card.addEventListener("click",()=>{
 
-    avatar.addEventListener("click",()=>{
-
-        toast("👤 Profile page coming soon");
-
-    });
-
-}
-
-// ======================================================
-// Promo Button
-// ======================================================
-
-document.querySelectorAll(".primary-btn")
-
-.forEach(button=>{
-
-    button.addEventListener("click",()=>{
-
-        toast("🚀 Feature launching soon");
+        toast("Opening account details...");
 
     });
 
 });
 
-// ======================================================
-// AI Assistant Ready
-// ======================================================
+// ==========================================================
+// QUICK ACTIONS
+// ==========================================================
 
-const iframe=document.querySelector(".assistant-card iframe");
+document.querySelectorAll(".action-card").forEach(card=>{
 
-if(iframe){
+    card.addEventListener("mouseenter",()=>{
 
-    iframe.addEventListener("load",()=>{
-
-        toast("🤖 LifeShield AI is ready");
-
-    });
-
-}
-
-// ======================================================
-// Auto Refresh Dashboard
-// ======================================================
-
-setInterval(()=>{
-
-    console.log("Dashboard refreshed");
-
-},60000);
-
-// ======================================================
-// Card Hover Tilt Effect
-// ======================================================
-
-document.querySelectorAll(
-    ".feature,.quick-card,.card"
-).forEach(card=>{
-
-    card.addEventListener("mousemove",(e)=>{
-
-        const rect=card.getBoundingClientRect();
-
-        const x=e.clientX-rect.left;
-
-        const y=e.clientY-rect.top;
-
-        const rotateX=((y/rect.height)-0.5)*-8;
-
-        const rotateY=((x/rect.width)-0.5)*8;
-
-        card.style.transform=
-        `
-        perspective(1000px)
-        rotateX(${rotateX}deg)
-        rotateY(${rotateY}deg)
-        translateY(-6px)
-        `;
+        card.style.boxShadow="0 25px 50px rgba(227,6,19,.15)";
 
     });
 
     card.addEventListener("mouseleave",()=>{
 
-        card.style.transform="";
+        card.style.boxShadow="";
 
     });
 
 });
 
-// ======================================================
-// Animated Notification Badge
-// ======================================================
+// ==========================================================
+// PAGE SCROLL EFFECT
+// ==========================================================
 
-const badge=document.querySelector(".icon-btn span");
+window.addEventListener("scroll",()=>{
 
-if(badge){
+    const navbar=document.querySelector(".navbar");
 
-    let notifications=3;
+    if(!navbar) return;
 
-    setInterval(()=>{
+    if(window.scrollY>30){
 
-        notifications++;
+        navbar.style.padding="14px 30px";
 
-        badge.innerHTML=notifications;
+        navbar.style.boxShadow="0 18px 45px rgba(0,0,0,.12)";
 
-        badge.animate([
+    }else{
 
-            {
+        navbar.style.padding="18px 30px";
 
-                transform:"scale(1)"
+        navbar.style.boxShadow="";
 
-            },
-
-            {
-
-                transform:"scale(1.35)"
-
-            },
-
-            {
-
-                transform:"scale(1)"
-
-            }
-
-        ],{
-
-            duration:500
-
-        });
-
-    },45000);
-
-}
-
-// ======================================================
-// Live Greeting Messages
-// ======================================================
-
-const messages=[
-
-"Everything looks healthy today 💰",
-
-"AI detected lower spending this week 📉",
-
-"You're saving more than last month 🎉",
-
-"Insurance coverage is fully protected 🛡️",
-
-"Keep investing consistently 📈",
-
-"Emergency fund is growing nicely 💵"
-
-];
-
-const welcomeText=document.querySelector(".welcome p");
-
-if(welcomeText){
-
-    let index=0;
-
-    setInterval(()=>{
-
-        welcomeText.style.opacity=0;
-
-        setTimeout(()=>{
-
-            welcomeText.innerHTML=
-
-            messages[index];
-
-            welcomeText.style.opacity=1;
-
-            index++;
-
-            if(index>=messages.length){
-
-                index=0;
-
-            }
-
-        },300);
-
-    },6000);
-
-}
-
-// ======================================================
-// Transaction Hover Animation
-// ======================================================
-
-document.querySelectorAll(
-
-".transactions tbody tr"
-
-).forEach(row=>{
-
-    row.addEventListener("mouseenter",()=>{
-
-        row.style.transform="scale(1.01)";
-
-        row.style.transition=".25s";
-
-    });
-
-    row.addEventListener("mouseleave",()=>{
-
-        row.style.transform="scale(1)";
-
-    });
+    }
 
 });
 
-// ======================================================
-// Feature Counter Animation
-// ======================================================
+// ==========================================================
+// KEYBOARD SHORTCUTS
+// ==========================================================
 
-document.querySelectorAll(
+document.addEventListener("keydown",(e)=>{
 
-".growth"
+    if(e.key==="Escape"){
 
-).forEach(item=>{
+        document
 
-    item.animate([
+            .querySelector(".mobile-menu")
 
-        {
+            ?.classList.remove("show");
 
-            transform:"translateY(0)"
-
-        },
-
-        {
-
-            transform:"translateY(-4px)"
-
-        },
-
-        {
-
-            transform:"translateY(0)"
-
-        }
-
-    ],{
-
-        duration:2500,
-
-        iterations:Infinity
-
-    });
+    }
 
 });
 
-// ======================================================
-// Smooth Scroll
-// ======================================================
-
-document.querySelectorAll('a[href^="#"]')
-
-.forEach(anchor=>{
-
-    anchor.addEventListener("click",(e)=>{
-
-        e.preventDefault();
-
-        const target=document.querySelector(
-
-            anchor.getAttribute("href")
-
-        );
-
-        if(target){
-
-            target.scrollIntoView({
-
-                behavior:"smooth"
-
-            });
-
-        }
-
-    });
-
-});
-
-// ======================================================
-// Floating AI Pulse
-// ======================================================
-
-const floatingAI=document.querySelector(".floating-ai");
-
-if(floatingAI){
-
-    setInterval(()=>{
-
-        floatingAI.animate([
-
-            {
-
-                transform:"scale(1)"
-
-            },
-
-            {
-
-                transform:"scale(1.12)"
-
-            },
-
-            {
-
-                transform:"scale(1)"
-
-            }
-
-        ],{
-
-            duration:1000
-
-        });
-
-    },5000);
-
-}
-
-// ======================================================
-// Console Welcome
-// ======================================================
+// ==========================================================
+// CONSOLE MESSAGE
+// ==========================================================
 
 console.log(
 
-"%cLifeShield AI Dashboard",
+"%cLifeShield Dashboard Ready",
 
-"color:#E30613;font-size:22px;font-weight:bold;"
+"color:#E30613;font-size:18px;font-weight:bold;"
 
 );
 
 console.log(
 
-"🚀 Premium Dashboard Loaded Successfully"
+"Developed with HTML, CSS & JavaScript"
 
 );
 
-console.log(
-
-"Developed for Isaac"
-
-);
-
-// ======================================================
+// ==========================================================
 // END OF APP.JS
-// ======================================================
+// ==========================================================
