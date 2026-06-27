@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LifeShield AI</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- ChartJS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="loader">
+    <div class="loader-ring"></div>
+</div>
+
+<div class="app">
+
+<!-- ===================================================== -->
+<!-- TOP NAVBAR -->
+<!-- ===================================================== -->
+
+<header class="topbar">
+
+    <div class="logo">
+
+        <div class="logo-icon">
+            <i class="fa-solid fa-shield-heart"></i>
+        </div>
+
+        <div>
+
+            <h2>LifeShield AI</h2>
+
+            <span>Smart Financial Protection</span>
+
+        </div>
+
+    </div>
+
+    <div class="search">
+
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+        <input
+            type="text"
+            placeholder="Search transactions, claims, insights...">
+
+    </div>
+
+    <div class="top-actions">
+
+        <button class="icon-btn">
+
+            <i class="fa-solid fa-bell"></i>
+
+            <span>3</span>
+
+        </button>
+
+        <button class="icon-btn darkMode">
+
+            <i class="fa-solid fa-moon"></i>
+
+        </button>
+
+        <img
+            src="https://i.pravatar.cc/150?img=8"
+            class="avatar">
+
+    </div>
+
+</header>
+
+<!-- ===================================================== -->
+<!-- WELCOME -->
+<!-- ===================================================== -->
+
+<section class="welcome">
+
+    <div class="welcome-left">
+
+        <h1>
+
+            Welcome back,
+            Isaac 👋
+
+        </h1>
+
+        <p>
+
+            Your AI has analysed today's finances.
+            Everything looks healthy.
+
+        </p>
+
+    </div>
+
+    <div class="welcome-right">
+
+        <button class="primary-btn">
+
+            <i class="fa-solid fa-plus"></i>
+
+            Quick Action
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ===================================================== -->
+<!-- FEATURE NAVIGATION -->
+<!-- ===================================================== -->
+
+<section class="feature-grid">
+
+<div class="feature active">
+
+<i class="fa-solid fa-robot"></i>
+
+<h3>LifeShield AI</h3>
+
+<p>Your AI Financial Assistant</p>
+
+</div>
+
+<div class="feature">
+
+<i class="fa-solid fa-qrcode"></i>
+
+<h3>Scan & Pay</h3>
+
+<p>Instant payments</p>
+
+</div>
+
+<div class="feature">
+
+<i class="fa-solid fa-chart-line"></i>
+
+<h3>Money Insights</h3>
+
+<p>AI Spending Analysis</p>
+
+</div>
+
+<div class="feature">
+
+<i class="fa-solid fa-file-waveform"></i>
+
+<h3>Claims</h3>
+
+<p>Insurance Claims</p>
+
+</div>
+
+<div class="feature">
+
+<i class="fa-solid fa-gear"></i>
+
+<h3>Settings</h3>
+
+<p>Personalisation</p>
+
+</div>
+
+</section>
+
+<!-- ===================================================== -->
+<!-- ACCOUNT CARD -->
+<!-- ===================================================== -->
+
+<section class="account-card">
+
+<div class="account-left">
+
+<div class="bank-icon">
+
+ISA
+
+</div>
+
+<div>
+
+<h2>
+
+Primary Account
+
+</h2>
+
+<p>
+
+Singapore Savings
+
+</p>
+
+<span>
+
+**** 4837
+
+</span>
+
+</div>
+
+</div>
+
+<div class="account-right">
+
+<h3>
+
+$56,850.24
+
+</h3>
+
+<p>
+
+Available Balance
+
+</p>
+
+<div class="growth">
+
+<i class="fa-solid fa-arrow-trend-up"></i>
+
+8.5%
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===================================================== -->
+<!-- MAIN GRID -->
+<!-- ===================================================== -->
+
+<section class="dashboard-grid">
+
+<div class="left-column">
+
+<!-- Savings Goal -->
+
+<div class="card savings-card">
+
+<div class="card-header">
+
+<h2>
+
+Savings Goal
+
+</h2>
+
+<span>
+
+74%
+
+</span>
+
+</div>
+
+<div class="progress">
+
+<div class="progress-fill">
+
+</div>
+
+</div>
+
+<h3>
+
+$14,800 / $20,000
+
+</h3>
+
+<p>
+
+Keep going.
+You're almost there.
+
+</p>
+
+</div>
+
+<!-- Transactions -->
+
+<div class="card transactions">
+
+<div class="section-title">
+
+<h2>
+
+Recent Transactions
+
+</h2>
+
+<a href="#">
+
+View All
+
+</a>
+
+</div>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Name</th>
+
+<th>Date</th>
+
+<th>Status</th>
+
+<th>Amount</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Netflix</td>
+
+<td>Today</td>
+
+<td>
+
+<span class="success">
+
+Completed
+
+</span>
+
+</td>
+
+<td>
+
+-$18.90
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>Salary</td>
+
+<td>Yesterday</td>
+
+<td>
+
+<span class="success">
+
+Completed
+
+</span>
+
+</td>
+
+<td class="income">
+
++$4,800
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>Grab</td>
+
+<td>Yesterday</td>
+
+<td>
+
+<span class="success">
+
+Completed
+
+</span>
+
+</td>
+
+<td>
+
+-$12.50
+
+</td>
+
+</tr>
+
+                        <tr>
+
+                            <td>NTUC FairPrice</td>
+
+                            <td>Monday</td>
+
+                            <td>
+                                <span class="success">
+                                    Completed
+                                </span>
+                            </td>
+
+                            <td>
+                                -$98.60
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Spotify</td>
+
+                            <td>Sunday</td>
+
+                            <td>
+                                <span class="pending">
+                                    Pending
+                                </span>
+                            </td>
+
+                            <td>
+                                -$11.99
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+        <!-- ========================= -->
+        <!-- RIGHT COLUMN -->
+        <!-- ========================= -->
+
+        <div class="right-column">
+
+            <!-- MONEY INSIGHTS -->
+
+            <div class="card insights-card">
+
+                <div class="section-title">
+
+                    <h2>Money Insights</h2>
+
+                    <button class="more-btn">
+
+                        <i class="fa-solid fa-ellipsis"></i>
+
+                    </button>
+
+                </div>
+
+                <canvas id="expenseChart"></canvas>
+
+                <div class="legend">
+
+                    <div>
+
+                        <span class="dot red"></span>
+
+                        Housing
+
+                    </div>
+
+                    <strong>$850</strong>
+
+                </div>
+
+                <div class="legend">
+
+                    <div>
+
+                        <span class="dot pink"></span>
+
+                        Food
+
+                    </div>
+
+                    <strong>$620</strong>
+
+                </div>
+
+                <div class="legend">
+
+                    <div>
+
+                        <span class="dot blue"></span>
+
+                        Transport
+
+                    </div>
+
+                    <strong>$364</strong>
+
+                </div>
+
+                <div class="legend">
+
+                    <div>
+
+                        <span class="dot green"></span>
+
+                        Insurance
+
+                    </div>
+
+                    <strong>$290</strong>
+
+                </div>
+
+            </div>
+
+            <!-- AI INSIGHTS -->
+
+            <div class="card ai-card">
+
+                <div class="section-title">
+
+                    <h2>
+
+                        AI Insights
+
+                    </h2>
+
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                </div>
+
+                <ul>
+
+                    <li>
+
+                        ✅ Spending decreased by 6%
+
+                    </li>
+
+                    <li>
+
+                        ✅ Bills are fully paid
+
+                    </li>
+
+                    <li>
+
+                        ✅ Savings increased by $540
+
+                    </li>
+
+                    <li>
+
+                        ✅ Investment portfolio up 3.8%
+
+                    </li>
+
+                    <li>
+
+                        ⚠ Netflix price increased
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- CREDIT SCORE -->
+
+            <div class="card credit-card">
+
+                <div class="section-title">
+
+                    <h2>
+
+                        Financial Health
+
+                    </h2>
+
+                </div>
+
+                <div class="score-circle">
+
+                    <span>
+
+                        91
+
+                    </span>
+
+                </div>
+
+                <p>
+
+                    Excellent Financial Status
+
+                </p>
+
+                <small>
+
+                    AI recommends continuing your
+                    current savings strategy.
+
+                </small>
+
+            </div>
+
+            <!-- BOTPRESS -->
+
+            <div class="card assistant-card">
+
+                <div class="assistant-header">
+
+                    <div>
+
+                        <h2>
+
+                            LifeShield AI Assistant
+
+                        </h2>
+
+                        <p>
+
+                            Ask anything about your finances.
+
+                        </p>
+
+                    </div>
+
+                    <i class="fa-solid fa-robot"></i>
+
+                </div>
+
+                <iframe
+
+                    src="https://cdn.botpress.cloud/webchat/v3.6/shareable.html?configUrl=https://files.bpcontent.cloud/2026/05/12/06/20260512064013-ISPL38MB.json"
+
+                    loading="lazy"
+
+                    allow="microphone">
+
+                </iframe>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ===================================== -->
+    <!-- QUICK ACTIONS -->
+    <!-- ===================================== -->
+
+    <section class="quick-actions">
+
+        <div class="quick-card">
+
+            <i class="fa-solid fa-money-bill-transfer"></i>
+
+            <span>
+
+                Transfer
+
+            </span>
+
+        </div>
+
+        <div class="quick-card">
+
+            <i class="fa-solid fa-credit-card"></i>
+
+            <span>
+
+                Pay Bills
+
+            </span>
+
+        </div>
+
+        <div class="quick-card">
+
+            <i class="fa-solid fa-piggy-bank"></i>
+
+            <span>
+
+                Save
+
+            </span>
+
+        </div>
+
+        <div class="quick-card">
+
+            <i class="fa-solid fa-chart-pie"></i>
+
+            <span>
+
+                Invest
+
+            </span>
+
+        </div>
+
+        <div class="quick-card">
+
+            <i class="fa-solid fa-file-medical"></i>
+
+            <span>
+
+                Claims
+
+            </span>
+
+        </div>
+
+    </section>
+
+        <!-- ===================================== -->
+    <!-- PROMOTIONAL BANNER -->
+    <!-- ===================================== -->
+
+    <section class="promo-banner">
+
+        <div class="promo-content">
+
+            <div class="promo-text">
+
+                <span class="badge">
+
+                    NEW
+
+                </span>
+
+                <h2>
+
+                    LifeShield AI Premium
+
+                </h2>
+
+                <p>
+
+                    Unlock personalised AI financial planning,
+                    insurance optimisation, investment insights,
+                    and 24/7 intelligent assistance.
+
+                </p>
+
+                <button class="primary-btn">
+
+                    Upgrade Now
+
+                </button>
+
+            </div>
+
+            <div class="promo-image">
+
+                <div class="floating-circle circle-one"></div>
+
+                <div class="floating-circle circle-two"></div>
+
+                <div class="floating-circle circle-three"></div>
+
+                <i class="fa-solid fa-shield-heart"></i>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ===================================== -->
+    <!-- RECENT ACTIVITY -->
+    <!-- ===================================== -->
+
+    <section class="activity-section">
+
+        <div class="section-title">
+
+            <h2>
+
+                Recent Activity
+
+            </h2>
+
+            <a href="#">
+
+                View History
+
+            </a>
+
+        </div>
+
+        <div class="activity-list">
+
+            <div class="activity-item">
+
+                <div class="activity-icon green">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                </div>
+
+                <div>
+
+                    <h4>
+
+                        Salary Credited
+
+                    </h4>
+
+                    <p>
+
+                        DBS Payroll
+
+                    </p>
+
+                </div>
+
+                <span>
+
+                    +$4,800
+
+                </span>
+
+            </div>
+
+            <div class="activity-item">
+
+                <div class="activity-icon blue">
+
+                    <i class="fa-solid fa-credit-card"></i>
+
+                </div>
+
+                <div>
+
+                    <h4>
+
+                        Insurance Premium Paid
+
+                    </h4>
+
+                    <p>
+
+                        OCBC LifeShield
+
+                    </p>
+
+                </div>
+
+                <span>
+
+                    -$180
+
+                </span>
+
+            </div>
+
+            <div class="activity-item">
+
+                <div class="activity-icon orange">
+
+                    <i class="fa-solid fa-lightbulb"></i>
+
+                </div>
+
+                <div>
+
+                    <h4>
+
+                        AI Recommendation
+
+                    </h4>
+
+                    <p>
+
+                        Increase monthly savings by $200.
+
+                    </p>
+
+                </div>
+
+                <span>
+
+                    Today
+
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ===================================== -->
+    <!-- FLOATING AI BUTTON -->
+    <!-- ===================================== -->
+
+    <button class="floating-ai">
+
+        <i class="fa-solid fa-robot"></i>
+
+    </button>
+
+    <!-- ===================================== -->
+    <!-- MOBILE BOTTOM NAVIGATION -->
+    <!-- ===================================== -->
+
+    <nav class="mobile-nav">
+
+        <a class="active">
+
+            <i class="fa-solid fa-house"></i>
+
+            <span>
+
+                Home
+
+            </span>
+
+        </a>
+
+        <a>
+
+            <i class="fa-solid fa-wallet"></i>
+
+            <span>
+
+                Accounts
+
+            </span>
+
+        </a>
+
+        <a>
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            <span>
+
+                Insights
+
+            </span>
+
+        </a>
+
+        <a>
+
+            <i class="fa-solid fa-robot"></i>
+
+            <span>
+
+                AI
+
+            </span>
+
+        </a>
+
+        <a>
+
+            <i class="fa-solid fa-user"></i>
+
+            <span>
+
+                Profile
+
+            </span>
+
+        </a>
+
+    </nav>
+
+    <!-- ===================================== -->
+    <!-- FOOTER -->
+    <!-- ===================================== -->
+
+    <footer>
+
+        <div class="footer-left">
+
+            <h3>
+
+                LifeShield AI
+
+            </h3>
+
+            <p>
+
+                Intelligent Financial Protection Platform
+
+            </p>
+
+        </div>
+
+        <div class="footer-right">
+
+            <a href="#">
+
+                Privacy
+
+            </a>
+
+            <a href="#">
+
+                Terms
+
+            </a>
+
+            <a href="#">
+
+                Support
+
+            </a>
+
+            <a href="#">
+
+                Contact
+
+            </a>
+
+        </div>
+
+    </footer>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+
+</html>
