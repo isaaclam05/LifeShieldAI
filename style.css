@@ -2233,6 +2233,14 @@ body.dark .more-btn{
 
 }
 
+.feature {
+    display: flex;          /* or your existing layout */
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
 /* =========================================================
    END OF STYLE.CSS
 ========================================================= */
