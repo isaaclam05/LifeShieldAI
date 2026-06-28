@@ -4,284 +4,122 @@
 <head>
 
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>LifeShield AI Assistant</title>
+    <title>LifeShield AI | AI Financial Assistant</title>
 
-    <!-- Google Font -->
+    <meta name="description"
+        content="Talk to LifeShield AI for personalised financial guidance on insurance, retirement planning and financial wellness.">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 
-    <!-- Font Awesome -->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="ai.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/responsive.css">
 
 </head>
 
 <body>
 
-<!-- ========================================= -->
-<!-- Loader -->
-<!-- ========================================= -->
+<!-- ========================= -->
+<!-- NAVBAR -->
+<!-- ========================= -->
 
-<div class="loader">
+<header class="header">
 
-    <div class="loader-ring"></div>
+    <div class="container navbar">
 
-</div>
+        <a href="index.html" class="logo">
 
-<div class="app">
+            <span class="logo-red">LifeShield</span>
 
-<!-- ========================================= -->
-<!-- TOP NAVIGATION -->
-<!-- ========================================= -->
+            <span class="logo-dark">AI</span>
 
-<header class="topbar">
+        </a>
 
-    <div class="logo">
+        <nav class="nav-menu">
 
-        <div class="logo-icon">
+            <a href="index.html">Home</a>
 
-            <i class="fa-solid fa-shield-heart"></i>
+            <a href="index.html#features">Features</a>
+
+            <a href="index.html#benefits">Benefits</a>
+
+            <a href="index.html#faq">FAQ</a>
+
+        </nav>
+
+        <div class="nav-actions">
+
+            <a href="index.html" class="btn-nav">
+
+                Back Home
+
+            </a>
 
         </div>
-
-        <div>
-
-            <h2>LifeShield AI</h2>
-
-            <span>Powered by Artificial Intelligence</span>
-
-        </div>
-
-    </div>
-
-    <div class="search">
-
-        <i class="fa-solid fa-magnifying-glass"></i>
-
-        <input
-            type="text"
-            placeholder="Ask LifeShield AI anything...">
-
-    </div>
-
-    <div class="top-actions">
-
-        <button class="icon-btn">
-
-            <i class="fa-solid fa-bell"></i>
-
-            <span>2</span>
-
-        </button>
-
-        <button class="icon-btn darkMode">
-
-            <i class="fa-solid fa-moon"></i>
-
-        </button>
-
-        <img
-            src="https://i.pravatar.cc/150?img=8"
-            class="avatar">
 
     </div>
 
 </header>
 
-<!-- ========================================= -->
-<!-- HERO -->
-<!-- ========================================= -->
+<br>
+<br>
 
-<section class="ai-hero">
+<!-- ========================= -->
+<!-- LIFESHIELD AI -->
+<!-- ========================= -->
 
-    <div class="hero-left">
+<section class="botpress-section" id="chat">
 
-        <div class="ai-badge">
+    <div class="container">
 
-            <i class="fa-solid fa-sparkles"></i>
+        <div class="section-header">
 
-            AI Powered
+            <span class="section-tag">
 
-        </div>
+                Live AI Assistant
 
-        <h1>
-
-            Meet LifeShield AI
-
-        </h1>
-
-        <p>
-
-            Your intelligent financial companion that helps you
-            understand your spending, optimise insurance,
-            grow your savings, analyse investments and answer
-            your financial questions 24/7.
-
-        </p>
-
-        <div class="hero-buttons">
-
-            <a href="index.html" class="primary-btn">
-
-                <i class="fa-solid fa-arrow-left"></i>
-
-                Dashboard
-
-            </a>
-
-            <button class="secondary-btn">
-
-                <i class="fa-solid fa-circle-info"></i>
-
-                Learn More
-
-            </button>
-
-        </div>
-
-    </div>
-
-    <div class="hero-right">
-
-        <div class="ai-avatar">
-
-            <i class="fa-solid fa-robot"></i>
-
-        </div>
-
-        <div class="status-card">
-
-            <div class="status-dot"></div>
-
-            AI Online
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ========================================= -->
-<!-- QUICK QUESTIONS -->
-<!-- ========================================= -->
-
-<section class="suggested-section">
-
-    <h2>
-
-        Suggested Questions
-
-    </h2>
-
-    <div class="suggestion-grid">
-
-        <button class="suggestion-card">
-
-            <i class="fa-solid fa-chart-line"></i>
-
-            Analyse my monthly spending
-
-        </button>
-
-        <button class="suggestion-card">
-
-            <i class="fa-solid fa-piggy-bank"></i>
-
-            How can I save more?
-
-        </button>
-
-        <button class="suggestion-card">
-
-            <i class="fa-solid fa-shield-heart"></i>
-
-            Recommend insurance plans
-
-        </button>
-
-        <button class="suggestion-card">
-
-            <i class="fa-solid fa-chart-pie"></i>
-
-            Review my investments
-
-        </button>
-
-        <button class="suggestion-card">
-
-            <i class="fa-solid fa-file-medical"></i>
-
-            Help me file a claim
-
-        </button>
-
-        <button class="suggestion-card">
-
-            <i class="fa-solid fa-wallet"></i>
-
-            Check my financial health
-
-        </button>
-
-    </div>
-
-</section>
-
-<!-- ========================================= -->
-<!-- AI CHAT -->
-<!-- ========================================= -->
-
-<section class="chat-section">
-
-    <div class="chat-header">
-
-        <div>
+            </span>
 
             <h2>
 
-                LifeShield AI Assistant
+                Chat With <span style="color:#E30613;">LifeShield AI</span>
 
             </h2>
 
             <p>
 
-                Secure • Intelligent • Available 24/7
+                Ask questions naturally about insurance,
+                retirement planning, savings, CPF, investments,
+                family protection and financial wellness.
 
             </p>
 
         </div>
 
-        <div class="online-status">
+        <div class="botpress-container">
 
-            <span class="pulse"></span>
-
-            Online
+            <iframe
+                src="https://cdn.botpress.cloud/webchat/v3.6/shareable.html?configUrl=https://files.bpcontent.cloud/2026/05/12/06/20260512064013-ISPL38MB.json"
+                title="LifeShield AI"
+                loading="lazy"
+                allow="microphone"
+                width="100%"
+                height="900"
+                frameborder="0">
+            </iframe>
 
         </div>
-
-    </div>
-
-    <div class="chat-container">
-
-                <iframe
-
-            src="https://cdn.botpress.cloud/webchat/v3.6/shareable.html?configUrl=https://files.bpcontent.cloud/2026/05/12/06/20260512064013-ISPL38MB.json"
-
-            loading="lazy"
-
-            allow="microphone"
-
-            title="LifeShield AI Assistant">
-
-        </iframe>
 
     </div>
 
@@ -291,89 +129,104 @@
 <!-- AI CAPABILITIES -->
 <!-- ========================================= -->
 
-<section class="capabilities-section">
+<section class="capabilities section">
 
-    <h2>
+    <div class="container">
 
-        What LifeShield AI Can Help You With
+        <div class="section-header">
 
-    </h2>
+            <span class="section-tag">
+                AI Capabilities
+            </span>
 
-    <div class="capabilities-grid">
-
-        <div class="capability-card">
-
-            <i class="fa-solid fa-chart-line"></i>
-
-            <h3>
-
-                Spending Analysis
-
-            </h3>
+            <h2>
+                What LifeShield AI Can Help You With
+            </h2>
 
             <p>
-
-                Understand where your money goes with personalised
-                spending insights and budgeting recommendations.
-
+                Built to provide intelligent financial guidance
+                through conversational AI.
             </p>
 
         </div>
 
-        <div class="capability-card">
+        <div class="features-grid">
 
-            <i class="fa-solid fa-shield-heart"></i>
+            <div class="feature-card">
 
-            <h3>
+                <div class="feature-icon">
 
-                Insurance Advisor
+                    <i class="fa-solid fa-shield-heart"></i>
 
-            </h3>
+                </div>
 
-            <p>
+                <h3>Insurance Review</h3>
 
-                Receive AI-powered recommendations to optimise
-                your insurance coverage based on your needs.
+                <p>
 
-            </p>
+                    Analyse your existing insurance coverage
+                    and identify protection gaps.
 
-        </div>
+                </p>
 
-        <div class="capability-card">
+            </div>
 
-            <i class="fa-solid fa-chart-pie"></i>
+            <div class="feature-card">
 
-            <h3>
+                <div class="feature-icon">
 
-                Investment Insights
+                    <i class="fa-solid fa-chart-line"></i>
 
-            </h3>
+                </div>
 
-            <p>
+                <h3>Retirement Planning</h3>
 
-                Learn about your investment portfolio and receive
-                educational insights to support informed decisions.
+                <p>
 
-            </p>
+                    Estimate your retirement readiness
+                    using AI-powered projections.
 
-        </div>
+                </p>
 
-        <div class="capability-card">
+            </div>
 
-            <i class="fa-solid fa-piggy-bank"></i>
+            <div class="feature-card">
 
-            <h3>
+                <div class="feature-icon">
 
-                Savings Planner
+                    <i class="fa-solid fa-piggy-bank"></i>
 
-            </h3>
+                </div>
 
-            <p>
+                <h3>Savings Analysis</h3>
 
-                Build personalised savings goals and receive
-                practical suggestions to help you stay on track.
+                <p>
 
-            </p>
+                    Understand your spending habits
+                    and improve your savings strategy.
+
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+
+                    <i class="fa-solid fa-users"></i>
+
+                </div>
+
+                <h3>Family Protection</h3>
+
+                <p>
+
+                    Discover recommendations to better
+                    protect your loved ones financially.
+
+                </p>
+
+            </div>
 
         </div>
 
@@ -382,85 +235,33 @@
 </section>
 
 <!-- ========================================= -->
-<!-- SECURITY -->
+<!-- CTA -->
 <!-- ========================================= -->
 
-<section class="security-banner">
+<section class="cta">
 
-    <div class="security-icon">
+    <div class="container">
 
-        <i class="fa-solid fa-lock"></i>
+        <div class="cta-card">
 
-    </div>
+            <h2>
 
-    <div>
+                Ready To Improve Your Financial Future?
 
-        <h2>
+            </h2>
 
-            Secure AI Conversations
+            <p>
 
-        </h2>
+                Speak with LifeShield AI today and receive
+                personalised financial guidance anytime.
 
-        <p>
+            </p>
 
-            LifeShield AI is designed to help you understand your
-            finances and insurance information. Avoid sharing
-            passwords, one-time passwords (OTPs), or other highly
-            sensitive personal information in the chat.
+            <button id="openChat2" class="btn-primary">
 
-        </p>
+                Start Chatting
 
-    </div>
-
-</section>
-
-<!-- ========================================= -->
-<!-- AI TIPS -->
-<!-- ========================================= -->
-
-<section class="tips-section">
-
-    <h2>
-
-        Popular Questions
-
-    </h2>
-
-    <div class="tips-grid">
-
-        <div class="tip-card">
-
-            💰 How much did I spend this month?
-
-        </div>
-
-        <div class="tip-card">
-
-            📈 How can I improve my financial health?
-
-        </div>
-
-        <div class="tip-card">
-
-            🛡 Which insurance plan is suitable for me?
-
-        </div>
-
-        <div class="tip-card">
-
-            🏠 How much should I save every month?
-
-        </div>
-
-        <div class="tip-card">
-
-            🚗 Help me submit an insurance claim.
-
-        </div>
-
-        <div class="tip-card">
-
-            📊 Explain my spending trends.
+            </button>
 
         </div>
 
@@ -468,64 +269,119 @@
 
 </section>
 
-<!-- ========================================= -->
+<!-- ========================= -->
 <!-- FOOTER -->
-<!-- ========================================= -->
+<!-- ========================= -->
 
-<footer>
+<footer class="footer">
 
-    <div class="footer-left">
+    <div class="container">
 
-        <h3>
+        <div class="footer-grid">
 
-            LifeShield AI
+            <div class="footer-about">
 
-        </h3>
+                <h2>
+                    <span class="logo-red">LifeShield</span>
+                    <span class="logo-dark">AI</span>
+                </h2>
 
-        <p>
+                <p>
+                    Empowering individuals and families with
+                    AI-driven financial protection and
+                    retirement planning.
+                </p>
 
-            Intelligent Financial Protection Platform
+            </div>
 
-        </p>
+            <div class="footer-links">
 
-    </div>
+                <h3>Quick Links</h3>
 
-    <div class="footer-right">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#features">Features</a></li>
+                    <li><a href="index.html#benefits">Benefits</a></li>
+                    <li><a href="index.html#faq">FAQ</a></li>
+                </ul>
 
-        <a href="index.html">
+            </div>
 
-            Dashboard
+            <div class="footer-links">
 
-        </a>
+                <h3>Services</h3>
 
-        <a href="#">
+                <ul>
+                    <li>Insurance Analysis</li>
+                    <li>Retirement Planning</li>
+                    <li>Financial Health Check</li>
+                    <li>AI Recommendations</li>
+                </ul>
 
-            Privacy
+            </div>
 
-        </a>
+            <div class="footer-links">
 
-        <a href="#">
+                <h3>Contact</h3>
 
-            Support
+                <ul>
+                    <li><i class="fa-solid fa-envelope"></i> hello@lifeshieldai.sg</li>
+                    <li><i class="fa-solid fa-phone"></i> +65 6123 4567</li>
+                    <li><i class="fa-solid fa-location-dot"></i> Singapore</li>
+                </ul>
 
-        </a>
+            </div>
 
-        <a href="#">
+        </div>
 
-            Contact
+        <div class="footer-bottom">
 
-        </a>
+            <p>
+
+                © 2026 LifeShield AI. Polytechnic FinTech Prototype.
+                Built for educational purposes.
+
+            </p>
+
+        </div>
 
     </div>
 
 </footer>
 
-</div>
+<!-- ========================= -->
+<!-- JAVASCRIPT -->
+<!-- ========================= -->
 
-<script src="app.js"></script>
+<script src="js/app.js"></script>
 
-<script src="ai.js"></script>
+<script src="https://cdn.botpress.cloud/webchat/v3.6/shareable.html?configUrl=https://files.bpcontent.cloud/2026/05/12/06/20260512064013-ISPL38MB.json"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const chatButtons = document.querySelectorAll("#openChat, #openChat2");
+
+    chatButtons.forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            if (window.botpress && typeof window.botpress.open === "function") {
+
+                window.botpress.open();
+
+            } else {
+
+                console.log("Botpress has not loaded yet.");
+
+            }
+
+        });
+
+    });
+
+});
+</script>
 
 </body>
-
 </html>

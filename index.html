@@ -4,654 +4,364 @@
 <head>
 
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
 
-    <title>LifeShield Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Google Font -->
+    <title>LifeShield AI | Smart Financial Protection</title>
 
-    <link rel="preconnect"
-          href="https://fonts.googleapis.com">
+    <meta name="description"
+        content="LifeShield AI is an intelligent financial planning assistant that helps Singaporeans make better insurance and retirement decisions.">
 
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
+    <meta name="keywords"
+        content="LifeShield AI, OCBC, FinTech, Insurance, Retirement, AI, Financial Planning">
+
+    <meta name="author" content="LifeShield AI">
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-          rel="stylesheet">
+        rel="stylesheet">
 
     <!-- Font Awesome -->
 
     <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     <!-- CSS -->
 
-    <link rel="stylesheet"
-          href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Favicon -->
+
+    <link rel="icon" href="assets/logo.png">
 
 </head>
 
 <body>
 
-<div class="app">
+    <!-- ========================= -->
+    <!-- NAVBAR -->
+    <!-- ========================= -->
 
-<!-- ===========================
-     TOP NAVIGATION
-=========================== -->
+    <header class="header">
 
-<header class="navbar">
+        <div class="container navbar">
 
-    <div class="logo">
+            <a href="index.html" class="logo">
 
-        <div class="logo-icon">
+                <span class="logo-red">LifeShield</span>
 
-            <i class="fa-solid fa-shield-heart"></i>
+                <span class="logo-dark">AI</span>
+
+            </a>
+
+            <nav class="nav-menu">
+
+                <a href="#home">Home</a>
+
+                <a href="#features">Features</a>
+
+                <a href="#benefits">Benefits</a>
+
+                <a href="#how-it-works">How It Works</a>
+
+                <a href="#faq">FAQ</a>
+
+            </nav>
+
+            <div class="nav-actions">
+
+                <a href="lifeshield-ai.html" class="btn-nav">
+
+                    Launch AI
+
+                </a>
+
+            </div>
+
+            <div class="menu-toggle">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </div>
 
         </div>
 
-        <div>
+    </header>
 
-            <h2>LifeShield</h2>
+    <!-- ========================= -->
+    <!-- HERO -->
+    <!-- ========================= -->
 
-            <span>Financial Protection Platform</span>
+    <section class="hero" id="home">
+
+        <div class="container hero-grid">
+
+            <div class="hero-content">
+
+                <span class="hero-tag">
+
+                    OCBC FinTech Innovation
+
+                </span>
+
+                <h1>
+
+                    Smarter Financial Protection
+
+                    <span>Powered by AI.</span>
+
+                </h1>
+
+                <p>
+
+                    LifeShield AI helps individuals and families understand
+                    their insurance coverage, retirement readiness and
+                    financial risks through intelligent personalised
+                    recommendations.
+
+                </p>
+
+                <br>
+
+                <div class="hero-buttons">
+
+                    <a href="lifeshield-ai.html" class="btn-primary">
+
+                        Try LifeShield AI
+
+                    </a>
+
+                    <a href="#features" class="btn-secondary">
+
+                        Explore Features
+
+                    </a>
+
+                </div>
+
+                <div class="hero-stats">
+
+                    <div class="stat">
+
+                        <h2>95%</h2>
+
+                        <span>Recommendation Accuracy</span>
+
+                    </div>
+
+                    <div class="stat">
+
+                        <h2>24/7</h2>
+
+                        <span>AI Assistance</span>
+
+                    </div>
+
+                    <div class="stat">
+
+                        <h2>10s</h2>
+
+                        <span>Average Response</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="hero-image">
+
+                <div class="dashboard-card">
+
+                    <div class="dashboard-top">
+
+                        <h3>Financial Health</h3>
+
+                        <span class="live">LIVE</span>
+
+                    </div>
+
+                    <div class="dashboard-body">
+
+                        <div class="small-card">
+
+                            <h4>Insurance Score</h4>
+
+                            <strong>89%</strong>
+
+                        </div>
+
+                        <div class="small-card">
+
+                            <h4>Retirement</h4>
+
+                            <strong>On Track</strong>
+
+                        </div>
+
+                        <div class="recommendation">
+
+                            <h4>AI Recommendation</h4>
+
+                            <p>
+
+                                Increase your critical illness coverage
+                                by approximately 15% to strengthen your
+                                family's financial protection.
+
+                            </p>
+
+                        </div>
+
+                        <div class="progress-wrapper">
+
+                            <div class="progress-header">
+
+                                <span>Protection Progress</span>
+
+                                <span>78%</span>
+
+                            </div>
+
+                            <div class="progress">
+
+                                <div class="progress-fill"></div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
 
         </div>
 
-    </div>
+    </section>
 
-    <nav class="nav-links">
+    <!-- ========================= -->
+<!-- FEATURES -->
+<!-- ========================= -->
 
-        <a href="#" class="active">
+<section class="features section" id="features">
 
-            Dashboard
+    <div class="container">
 
-        </a>
+        <div class="section-header">
 
-        <a href="#accounts">
-
-            Accounts
-
-        </a>
-
-        <a href="#transactions">
-
-            Transactions
-
-        </a>
-
-        <a href="#insights">
-
-            Insights
-
-        </a>
-
-        <a href="lifeshield-ai.html">
-
-            LifeShield AI
-
-        </a>
-
-    </nav>
-
-    <div class="nav-right">
-
-        <button class="search-btn">
-
-            <i class="fa-solid fa-magnifying-glass"></i>
-
-        </button>
-
-        <button class="notification-btn">
-
-            <i class="fa-solid fa-bell"></i>
-
-            <span class="notification-dot"></span>
-
-        </button>
-
-        <img src="https://i.pravatar.cc/150?img=12"
-             class="profile">
-
-    </div>
-
-    <button class="menu-btn">
-
-        <i class="fa-solid fa-bars"></i>
-
-    </button>
-
-</header>
-
-<!-- ===========================
-     MOBILE NAVIGATION
-=========================== -->
-
-<nav class="mobile-menu">
-
-    <a href="#">
-
-        <i class="fa-solid fa-house"></i>
-
-        Dashboard
-
-    </a>
-
-    <a href="#accounts">
-
-        <i class="fa-solid fa-wallet"></i>
-
-        Accounts
-
-    </a>
-
-    <a href="#transactions">
-
-        <i class="fa-solid fa-arrow-right-arrow-left"></i>
-
-        Transactions
-
-    </a>
-
-    <a href="#insights">
-
-        <i class="fa-solid fa-chart-line"></i>
-
-        Insights
-
-    </a>
-
-    <a href="lifeshield-ai.html">
-
-        <i class="fa-solid fa-robot"></i>
-
-        LifeShield AI
-
-    </a>
-
-</nav>
-
-<!-- =========================================
-     HERO / DASHBOARD
-========================================= -->
-
-<main class="dashboard">
-
-<section class="hero">
-
-    <div class="hero-left">
-
-        <span class="welcome-tag">
-
-            👋 Welcome Back
-
-        </span>
-
-        <h1>
-
-            Good Morning, Isaac
-
-        </h1>
-
-        <p>
-
-            Here's an overview of your financial health today.
-            Track your savings, spending, insurance and let
-            LifeShield AI help you make smarter financial decisions.
-
-        </p>
-
-        <div class="hero-buttons">
-
-            <button class="primary-btn">
-
-                <i class="fa-solid fa-wallet"></i>
-
-                View Accounts
-
-            </button>
-
-            <button class="secondary-btn">
-
-                <i class="fa-solid fa-chart-line"></i>
-
-                View Insights
-
-            </button>
-
-        </div>
-
-    </div>
-
-    <div class="hero-right">
-
-        <div class="balance-card">
-
-            <span>Total Balance</span>
+            <span class="section-tag">
+                Why Choose LifeShield AI
+            </span>
 
             <h2>
-
-                SGD 128,520.86
-
+                Everything You Need For Smarter Financial Planning
             </h2>
 
-            <div class="balance-change positive">
-
-                <i class="fa-solid fa-arrow-trend-up"></i>
-
-                +6.8% this month
-
-            </div>
+            <p>
+                Designed to simplify financial protection with
+                AI-powered insights tailored to your unique needs.
+            </p>
 
         </div>
 
-    </div>
+        <div class="features-grid">
 
-</section>
+            <div class="feature-card">
 
-<!-- =========================================
-     QUICK ACTIONS
-========================================= -->
-
-<section class="quick-actions">
-
-    <a href="#" class="action-card">
-
-        <i class="fa-solid fa-building-columns"></i>
-
-        <h3>Accounts</h3>
-
-        <p>Manage all bank accounts</p>
-
-    </a>
-
-    <a href="#" class="action-card">
-
-        <i class="fa-solid fa-money-bill-transfer"></i>
-
-        <h3>Transfer</h3>
-
-        <p>Send money instantly</p>
-
-    </a>
-
-    <a href="#" class="action-card">
-
-        <i class="fa-solid fa-credit-card"></i>
-
-        <h3>Cards</h3>
-
-        <p>Manage your cards</p>
-
-    </a>
-
-    <a href="#" class="action-card">
-
-        <i class="fa-solid fa-chart-line"></i>
-
-        <h3>Insights</h3>
-
-        <p>Track your finances</p>
-
-    </a>
-
-    <a href="lifeshield-ai.html" class="action-card featured">
-
-        <i class="fa-solid fa-robot"></i>
-
-        <h3>LifeShield AI</h3>
-
-        <p>Your AI Financial Assistant</p>
-
-    </a>
-
-</section>
-
-<!-- =========================================
-     FINANCIAL OVERVIEW
-========================================= -->
-
-<section class="overview-grid">
-
-    <div class="overview-card">
-
-        <div class="card-header">
-
-            <h3>Financial Health</h3>
-
-            <i class="fa-solid fa-heart-pulse"></i>
-
-        </div>
-
-        <div class="health-score">
-
-            91
-
-        </div>
-
-        <span class="excellent">
-
-            Excellent
-
-        </span>
-
-        <p>
-
-            Your financial health is stronger than
-            87% of users this month.
-
-        </p>
-
-    </div>
-
-    <div class="overview-card">
-
-        <div class="card-header">
-
-            <h3>Monthly Spending</h3>
-
-            <i class="fa-solid fa-wallet"></i>
-
-        </div>
-
-        <h2>
-
-            SGD 3,842
-
-        </h2>
-
-        <span class="negative">
-
-            ↑ 8% from last month
-
-        </span>
-
-    </div>
-
-    <div class="overview-card">
-
-        <div class="card-header">
-
-            <h3>Savings Goal</h3>
-
-            <i class="fa-solid fa-piggy-bank"></i>
-
-        </div>
-
-        <h2>
-
-            74%
-
-        </h2>
-
-        <div class="progress">
-
-            <div class="progress-bar" style="width:74%;"></div>
-
-        </div>
-
-        <small>
-
-            SGD 14,800 / SGD 20,000
-
-        </small>
-
-    </div>
-
-    <div class="overview-card">
-
-        <div class="card-header">
-
-            <h3>Insurance Coverage</h3>
-
-            <i class="fa-solid fa-shield-heart"></i>
-
-        </div>
-
-        <h2>
-
-            Protected
-
-        </h2>
-
-        <span class="positive">
-
-            All policies active
-
-        </span>
-
-    </div>
-
-</section>
-
-<!-- =========================================
-     ACCOUNTS & TRANSACTIONS
-========================================= -->
-
-<section class="dashboard-grid">
-
-    <!-- ================= Accounts ================= -->
-
-    <div class="card account-card" id="accounts">
-
-        <div class="section-title">
-
-            <h2>My Accounts</h2>
-
-            <a href="#">View All</a>
-
-        </div>
-
-        <div class="account-list">
-
-            <div class="account-item">
-
-                <div class="account-icon savings">
-
-                    <i class="fa-solid fa-building-columns"></i>
-
-                </div>
-
-                <div class="account-details">
-
-                    <h3>360 Savings Account</h3>
-
-                    <p>•••• 4832</p>
-
-                </div>
-
-                <div class="account-balance">
-
-                    <h3>SGD 62,485.20</h3>
-
-                </div>
-
-            </div>
-
-            <div class="account-item">
-
-                <div class="account-icon checking">
-
-                    <i class="fa-solid fa-wallet"></i>
-
-                </div>
-
-                <div class="account-details">
-
-                    <h3>Everyday Account</h3>
-
-                    <p>•••• 9135</p>
-
-                </div>
-
-                <div class="account-balance">
-
-                    <h3>SGD 18,920.40</h3>
-
-                </div>
-
-            </div>
-
-            <div class="account-item">
-
-                <div class="account-icon investment">
-
-                    <i class="fa-solid fa-chart-line"></i>
-
-                </div>
-
-                <div class="account-details">
-
-                    <h3>Investment Portfolio</h3>
-
-                    <p>Long-term Investments</p>
-
-                </div>
-
-                <div class="account-balance">
-
-                    <h3>SGD 47,115.26</h3>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-    <!-- ================= Recent Transactions ================= -->
-
-    <div class="card transactions-card" id="transactions">
-
-        <div class="section-title">
-
-            <h2>Recent Transactions</h2>
-
-            <a href="#">View All</a>
-
-        </div>
-
-        <div class="transaction-list">
-
-            <div class="transaction">
-
-                <div class="transaction-icon shopping">
-
-                    <i class="fa-solid fa-cart-shopping"></i>
-
-                </div>
-
-                <div class="transaction-info">
-
-                    <h3>NTUC FairPrice</h3>
-
-                    <span>Today • Grocery</span>
-
-                </div>
-
-                <div class="transaction-amount negative">
-
-                    - SGD 84.60
-
-                </div>
-
-            </div>
-
-            <div class="transaction">
-
-                <div class="transaction-icon income">
-
-                    <i class="fa-solid fa-money-bill-wave"></i>
-
-                </div>
-
-                <div class="transaction-info">
-
-                    <h3>Salary Credit</h3>
-
-                    <span>Yesterday</span>
-
-                </div>
-
-                <div class="transaction-amount positive">
-
-                    + SGD 5,200.00
-
-                </div>
-
-            </div>
-
-            <div class="transaction">
-
-                <div class="transaction-icon transport">
-
-                    <i class="fa-solid fa-car"></i>
-
-                </div>
-
-                <div class="transaction-info">
-
-                    <h3>Grab</h3>
-
-                    <span>Yesterday</span>
-
-                </div>
-
-                <div class="transaction-amount negative">
-
-                    - SGD 18.20
-
-                </div>
-
-            </div>
-
-            <div class="transaction">
-
-                <div class="transaction-icon food">
-
-                    <i class="fa-solid fa-utensils"></i>
-
-                </div>
-
-                <div class="transaction-info">
-
-                    <h3>Starbucks</h3>
-
-                    <span>2 days ago</span>
-
-                </div>
-
-                <div class="transaction-amount negative">
-
-                    - SGD 8.90
-
-                </div>
-
-            </div>
-
-            <div class="transaction">
-
-                <div class="transaction-icon insurance">
-
+                <div class="feature-icon">
                     <i class="fa-solid fa-shield-heart"></i>
-
                 </div>
 
-                <div class="transaction-info">
+                <h3>Insurance Analysis</h3>
 
-                    <h3>Insurance Premium</h3>
+                <p>
+                    Instantly analyse your current insurance
+                    coverage and identify protection gaps.
+                </p>
 
-                    <span>Monthly Payment</span>
+            </div>
 
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    <i class="fa-solid fa-chart-line"></i>
                 </div>
 
-                <div class="transaction-amount negative">
+                <h3>Retirement Planning</h3>
 
-                    - SGD 256.00
+                <p>
+                    Understand whether you're on track
+                    for retirement using AI forecasting.
+                </p>
 
+            </div>
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    <i class="fa-solid fa-brain"></i>
                 </div>
+
+                <h3>AI Recommendations</h3>
+
+                <p>
+                    Receive personalised financial
+                    recommendations in seconds.
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+
+                <h3>Family Protection</h3>
+
+                <p>
+                    Ensure your loved ones remain financially
+                    protected during unexpected events.
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    <i class="fa-solid fa-wallet"></i>
+                </div>
+
+                <h3>Budget Insights</h3>
+
+                <p>
+                    Discover opportunities to improve
+                    savings and optimise spending habits.
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+
+                <h3>Bank-Level Security</h3>
+
+                <p>
+                    Your financial information remains
+                    encrypted and securely protected.
+                </p>
 
             </div>
 
@@ -661,355 +371,356 @@
 
 </section>
 
-<!-- =========================================
-     SPENDING OVERVIEW
-========================================= -->
+<!-- ========================= -->
+<!-- BENEFITS -->
+<!-- ========================= -->
 
-<section class="spending-section">
+<section class="benefits section" id="benefits">
 
-    <div class="card">
+    <div class="container benefits-grid">
 
-        <div class="section-title">
+        <div class="benefits-left">
 
-            <h2>Monthly Spending</h2>
-
-            <a href="#">See Report</a>
-
-        </div>
-
-        <div class="spending-grid">
-
-            <div class="spending-item">
-
-                <h3>Housing</h3>
-
-                <span>SGD 1,450</span>
-
-            </div>
-
-            <div class="progress">
-
-                <div class="progress-bar" style="width:82%"></div>
-
-            </div>
-
-            <div class="spending-item">
-
-                <h3>Food & Dining</h3>
-
-                <span>SGD 620</span>
-
-            </div>
-
-            <div class="progress">
-
-                <div class="progress-bar" style="width:65%"></div>
-
-            </div>
-
-            <div class="spending-item">
-
-                <h3>Transport</h3>
-
-                <span>SGD 285</span>
-
-            </div>
-
-            <div class="progress">
-
-                <div class="progress-bar" style="width:38%"></div>
-
-            </div>
-
-            <div class="spending-item">
-
-                <h3>Shopping</h3>
-
-                <span>SGD 710</span>
-
-            </div>
-
-            <div class="progress">
-
-                <div class="progress-bar" style="width:71%"></div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- =========================================
-     AI INSIGHTS
-========================================= -->
-
-<section class="dashboard-grid" id="insights">
-
-    <!-- AI Insights -->
-
-    <div class="card ai-insights">
-
-        <div class="section-title">
+            <span class="section-tag">
+                Intelligent Financial Protection
+            </span>
 
             <h2>
-
-                <i class="fa-solid fa-sparkles"></i>
-
-                LifeShield AI Insights
-
+                Make Better Financial Decisions With Confidence
             </h2>
 
-            <a href="lifeshield-ai.html">
+            <p>
 
-                Open AI →
+                LifeShield AI combines financial expertise with
+                artificial intelligence to provide personalised
+                recommendations that help you achieve long-term
+                financial security.
+
+            </p>
+
+            <div class="benefit-list">
+
+                <div class="benefit-item">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    Personalised Insurance Reviews
+
+                </div>
+
+                <div class="benefit-item">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    Retirement Readiness Assessment
+
+                </div>
+
+                <div class="benefit-item">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    Family Financial Protection
+
+                </div>
+
+                <div class="benefit-item">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    AI-Powered Risk Detection
+
+                </div>
+
+            </div>
+
+            <a href="lifeshield-ai.html" class="btn-primary">
+
+                Launch AI Assistant
 
             </a>
 
         </div>
 
-        <div class="insight-list">
+        <div class="benefits-right">
 
-            <div class="insight success">
+            <div class="summary-card">
 
-                <i class="fa-solid fa-circle-check"></i>
+                <h3>Your Financial Snapshot</h3>
 
-                <div>
+                <div class="summary-item">
 
-                    <h3>Healthy Savings Rate</h3>
+                    <span>Insurance Coverage</span>
 
-                    <p>
-
-                        You've saved 18% of your monthly income,
-                        exceeding your target by 3%.
-
-                    </p>
+                    <strong>82%</strong>
 
                 </div>
 
-            </div>
+                <div class="summary-item">
 
-            <div class="insight warning">
+                    <span>Retirement Readiness</span>
 
-                <i class="fa-solid fa-triangle-exclamation"></i>
-
-                <div>
-
-                    <h3>Dining Expenses Increased</h3>
-
-                    <p>
-
-                        Food spending increased 12% compared to
-                        last month.
-
-                    </p>
+                    <strong>76%</strong>
 
                 </div>
 
-            </div>
+                <div class="summary-item">
 
-            <div class="insight info">
+                    <span>Emergency Savings</span>
 
-                <i class="fa-solid fa-lightbulb"></i>
+                    <strong>68%</strong>
 
-                <div>
+                </div>
 
-                    <h3>AI Recommendation</h3>
+                <div class="summary-item">
 
-                    <p>
+                    <span>Overall Financial Health</span>
 
-                        Consider investing an additional
-                        SGD 300 monthly to reach your retirement
-                        goal earlier.
-
-                    </p>
+                    <strong class="highlight">Good</strong>
 
                 </div>
 
             </div>
 
         </div>
-
-        <a href="lifeshield-ai.html" class="primary-btn">
-
-            <i class="fa-solid fa-robot"></i>
-
-            Ask LifeShield AI
-
-        </a>
 
     </div>
 
-    <!-- Investment -->
+</section>
 
-    <div class="card">
+<!-- ========================= -->
+<!-- HOW IT WORKS -->
+<!-- ========================= -->
 
-        <div class="section-title">
+<section class="how-it-works section" id="how-it-works">
 
-            <h2>Investment Portfolio</h2>
+    <div class="container">
+
+        <div class="section-header">
+
+            <span class="section-tag">
+                How It Works
+            </span>
+
+            <h2>
+
+                Financial Planning Made Simple
+
+            </h2>
+
+            <p>
+
+                LifeShield AI guides you through every step,
+                from understanding your finances to receiving
+                personalised recommendations.
+
+            </p>
 
         </div>
 
-        <div class="investment-total">
+        <div class="steps-grid">
 
-            <h1>SGD 47,115.26</h1>
+            <div class="step-card">
 
-            <span class="positive">
+                <div class="step-number">01</div>
 
-                +8.4% This Year
+                <i class="fa-solid fa-user-plus"></i>
+
+                <h3>Create Your Profile</h3>
+
+                <p>
+
+                    Enter basic information about your age,
+                    income, family and financial goals.
+
+                </p>
+
+            </div>
+
+            <div class="step-card">
+
+                <div class="step-number">02</div>
+
+                <i class="fa-solid fa-microchip"></i>
+
+                <h3>AI Analysis</h3>
+
+                <p>
+
+                    Our intelligent engine analyses your
+                    financial situation within seconds.
+
+                </p>
+
+            </div>
+
+            <div class="step-card">
+
+                <div class="step-number">03</div>
+
+                <i class="fa-solid fa-file-waveform"></i>
+
+                <h3>Receive Insights</h3>
+
+                <p>
+
+                    Discover insurance gaps,
+                    retirement readiness,
+                    and financial risks.
+
+                </p>
+
+            </div>
+
+            <div class="step-card">
+
+                <div class="step-number">04</div>
+
+                <i class="fa-solid fa-comments"></i>
+
+                <h3>Chat With LifeShield AI</h3>
+
+                <p>
+
+                    Ask financial questions naturally and
+                    receive personalised guidance anytime.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- STATISTICS -->
+<!-- ========================= -->
+
+<section class="statistics section">
+
+    <div class="container">
+
+        <div class="stats-grid">
+
+            <div class="stat-card">
+
+                <h2>95%</h2>
+
+                <span>Recommendation Accuracy</span>
+
+            </div>
+
+            <div class="stat-card">
+
+                <h2>24/7</h2>
+
+                <span>AI Availability</span>
+
+            </div>
+
+            <div class="stat-card">
+
+                <h2>10K+</h2>
+
+                <span>Financial Simulations</span>
+
+            </div>
+
+            <div class="stat-card">
+
+                <h2>100%</h2>
+
+                <span>Digital Experience</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- TESTIMONIALS -->
+<!-- ========================= -->
+
+<section class="testimonials section">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span class="section-tag">
+
+                User Feedback
 
             </span>
 
-        </div>
+            <h2>
 
-        <div class="portfolio-item">
+                Helping People Make Better Financial Decisions
 
-            <span>Global Equity Fund</span>
-
-            <strong>45%</strong>
+            </h2>
 
         </div>
 
-        <div class="progress">
+        <div class="testimonial-grid">
 
-            <div class="progress-bar" style="width:45%"></div>
+            <div class="testimonial-card">
 
-        </div>
+                <i class="fa-solid fa-quote-left"></i>
 
-        <div class="portfolio-item">
+                <p>
 
-            <span>Singapore REITs</span>
+                    LifeShield AI clearly explained my
+                    insurance coverage and highlighted
+                    important protection gaps.
 
-            <strong>30%</strong>
+                </p>
 
-        </div>
+                <h4>Sarah Lim</h4>
 
-        <div class="progress">
+                <span>Working Professional</span>
 
-            <div class="progress-bar" style="width:30%"></div>
+            </div>
 
-        </div>
+            <div class="testimonial-card">
 
-        <div class="portfolio-item">
+                <i class="fa-solid fa-quote-left"></i>
 
-            <span>Fixed Income</span>
+                <p>
 
-            <strong>25%</strong>
+                    The retirement projection helped me
+                    understand exactly how much I should
+                    be saving every month.
 
-        </div>
+                </p>
 
-        <div class="progress">
+                <h4>Jason Tan</h4>
 
-            <div class="progress-bar" style="width:25%"></div>
+                <span>Young Executive</span>
 
-        </div>
+            </div>
 
-    </div>
+            <div class="testimonial-card">
 
-</section>
+                <i class="fa-solid fa-quote-left"></i>
 
-<!-- =========================================
-     INSURANCE
-========================================= -->
+                <p>
 
-<section class="card insurance-section">
+                    The AI recommendations were simple,
+                    personalised and easy to understand.
 
-    <div class="section-title">
+                </p>
 
-        <h2>
+                <h4>Amanda Wong</h4>
 
-            Insurance Protection
+                <span>Business Owner</span>
 
-        </h2>
-
-        <a href="#">
-
-            View Policies
-
-        </a>
-
-    </div>
-
-    <div class="insurance-grid">
-
-        <div class="policy-card">
-
-            <i class="fa-solid fa-heart-pulse"></i>
-
-            <h3>Life Insurance</h3>
-
-            <p>
-
-                Active
-
-            </p>
-
-            <strong>
-
-                SGD 500,000 Coverage
-
-            </strong>
-
-        </div>
-
-        <div class="policy-card">
-
-            <i class="fa-solid fa-house"></i>
-
-            <h3>Home Insurance</h3>
-
-            <p>
-
-                Active
-
-            </p>
-
-            <strong>
-
-                SGD 250,000 Coverage
-
-            </strong>
-
-        </div>
-
-        <div class="policy-card">
-
-            <i class="fa-solid fa-car"></i>
-
-            <h3>Motor Insurance</h3>
-
-            <p>
-
-                Renews in 4 months
-
-            </p>
-
-            <strong>
-
-                Comprehensive
-
-            </strong>
-
-        </div>
-
-        <div class="policy-card">
-
-            <i class="fa-solid fa-notes-medical"></i>
-
-            <h3>Health Insurance</h3>
-
-            <p>
-
-                Active
-
-            </p>
-
-            <strong>
-
-                Premium Shield Plan
-
-            </strong>
+            </div>
 
         </div>
 
@@ -1017,73 +728,398 @@
 
 </section>
 
-<!-- =========================================
-     PROMOTIONAL BANNER
-========================================= -->
+<!-- ========================= -->
+<!-- CALL TO ACTION -->
+<!-- ========================= -->
 
-<section class="promo-banner">
+<section class="cta">
 
-    <div>
+    <div class="container">
 
-        <h2>
+        <div class="cta-card">
 
-            Let LifeShield AI review your finances.
+            <h2>
 
-        </h2>
+                Ready To Secure Your Financial Future?
 
-        <p>
+            </h2>
 
-            Receive personalised recommendations for
-            savings, insurance, investments and financial
-            planning within seconds.
+            <p>
 
-        </p>
+                Start your personalised financial assessment
+                today with LifeShield AI.
+
+            </p>
+
+            <a href="lifeshield-ai.html" class="btn-primary">
+
+                Launch LifeShield AI
+
+            </a>
+
+        </div>
 
     </div>
 
-    <a href="lifeshield-ai.html" class="primary-btn">
+</section>
 
-        Launch LifeShield AI
+<!-- ========================= -->
+<!-- FAQ -->
+<!-- ========================= -->
 
-    </a>
+<section class="faq section" id="faq">
+
+    <div class="faq-container">
+
+    <!-- FAQ 1 -->
+
+    <div class="faq-item">
+
+        <button class="faq-question">
+
+            <span>What is LifeShield AI?</span>
+
+            <i class="fa-solid fa-plus"></i>
+
+        </button>
+
+        <div class="faq-answer">
+
+            <p>
+                LifeShield AI is an AI-powered financial assistant that helps users better understand insurance, retirement planning, savings goals, and financial protection through personalised conversations.
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- FAQ 2 -->
+
+    <div class="faq-item">
+
+        <button class="faq-question">
+
+            <span>How does LifeShield AI work?</span>
+
+            <i class="fa-solid fa-plus"></i>
+
+        </button>
+
+        <div class="faq-answer">
+
+            <p>
+                Simply ask a question in natural language. LifeShield AI analyses your query and provides personalised financial guidance, educational information and recommendations within seconds.
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- FAQ 3 -->
+
+    <div class="faq-item">
+
+        <button class="faq-question">
+
+            <span>Is my information secure?</span>
+
+            <i class="fa-solid fa-plus"></i>
+
+        </button>
+
+        <div class="faq-answer">
+
+            <p>
+                Yes. This prototype demonstrates how secure AI interactions can be delivered. In a production environment, user information would be encrypted and protected using enterprise-grade security practices.
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- FAQ 4 -->
+
+    <div class="faq-item">
+
+        <button class="faq-question">
+
+            <span>Who should use LifeShield AI?</span>
+
+            <i class="fa-solid fa-plus"></i>
+
+        </button>
+
+        <div class="faq-answer">
+
+            <p>
+                LifeShield AI is suitable for students, working adults, young families, homeowners and retirees who want to make more informed financial decisions.
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- FAQ 5 -->
+
+    <div class="faq-item">
+
+        <button class="faq-question">
+
+            <span>Can LifeShield AI recommend insurance plans?</span>
+
+            <i class="fa-solid fa-plus"></i>
+
+        </button>
+
+        <div class="faq-answer">
+
+            <p>
+                LifeShield AI can explain different insurance products and highlight possible coverage gaps. It provides educational recommendations and does not replace advice from a licensed financial adviser.
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- FAQ 6 -->
+
+    <div class="faq-item">
+
+        <button class="faq-question">
+
+            <span>Can LifeShield AI help with retirement planning?</span>
+
+            <i class="fa-solid fa-plus"></i>
+
+        </button>
+
+        <div class="faq-answer">
+
+            <p>
+                Yes. LifeShield AI can provide general retirement planning guidance, estimate retirement readiness based on information you provide, and suggest areas that may need attention.
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- FAQ 7 -->
+
+    <div class="faq-item">
+
+        <button class="faq-question">
+
+            <span>Can I ask questions about CPF and savings?</span>
+
+            <i class="fa-solid fa-plus"></i>
+
+        </button>
+
+        <div class="faq-answer">
+
+            <p>
+                Yes. You can ask general questions about budgeting, emergency funds, savings habits and CPF concepts. The AI aims to explain these topics in a simple and understandable way.
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- FAQ 8 -->
+
+    <div class="faq-item">
+
+        <button class="faq-question">
+
+            <span>Is LifeShield AI available anytime?</span>
+
+            <i class="fa-solid fa-plus"></i>
+
+        </button>
+
+        <div class="faq-answer">
+
+            <p>
+                Yes. LifeShield AI is designed to provide assistance 24 hours a day, 7 days a week, allowing users to receive financial guidance whenever they need it.
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- FAQ 9 -->
+
+    <div class="faq-item">
+
+        <button class="faq-question">
+
+            <span>Does LifeShield AI replace a financial advisor?</span>
+
+            <i class="fa-solid fa-plus"></i>
+
+        </button>
+
+        <div class="faq-answer">
+
+            <p>
+                No. LifeShield AI complements financial planning by providing educational insights and personalised guidance. Users should consult qualified professionals before making important financial decisions.
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- FAQ 10 -->
+
+    <div class="faq-item">
+
+        <button class="faq-question">
+
+            <span>Is LifeShield AI free to use?</span>
+
+            <i class="fa-solid fa-plus"></i>
+
+        </button>
+
+        <div class="faq-answer">
+
+            <p>
+                For this Polytechnic FinTech prototype, LifeShield AI is available for demonstration purposes. Future versions could include additional premium financial planning features and integrations.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
 
 </section>
 
-</main>
-
-<!-- =========================================
-     FOOTER
-========================================= -->
+<!-- ========================= -->
+<!-- FOOTER -->
+<!-- ========================= -->
 
 <footer class="footer">
 
-    <div>
+    <div class="container">
 
-        <h3>LifeShield</h3>
+        <div class="footer-grid">
 
-        <p>
+            <div class="footer-about">
 
-            Intelligent Financial Protection Platform
+                <h2>
 
-        </p>
+                    <span class="logo-red">LifeShield</span>
+                    <span class="logo-dark">AI</span>
 
-    </div>
+                </h2>
 
-    <div class="footer-links">
+                <p>
 
-        <a href="#">Privacy</a>
+                    Empowering individuals and families with
+                    AI-driven financial protection and
+                    retirement planning.
 
-        <a href="#">Terms</a>
+                </p>
 
-        <a href="#">Support</a>
+            </div>
 
-        <a href="#">Contact</a>
+            <div class="footer-links">
+
+                <h3>Quick Links</h3>
+
+                <ul>
+
+                    <li><a href="#home">Home</a></li>
+
+                    <li><a href="#features">Features</a></li>
+
+                    <li><a href="#benefits">Benefits</a></li>
+
+                    <li><a href="#how-it-works">How It Works</a></li>
+
+                    <li><a href="lifeshield-ai.html">AI Assistant</a></li>
+
+                </ul>
+
+            </div>
+
+            <div class="footer-links">
+
+                <h3>Services</h3>
+
+                <ul>
+
+                    <li>Insurance Analysis</li>
+
+                    <li>Retirement Planning</li>
+
+                    <li>Financial Health Check</li>
+
+                    <li>AI Recommendations</li>
+
+                    <li>Family Protection</li>
+
+                </ul>
+
+            </div>
+
+            <div class="footer-links">
+
+                <h3>Contact</h3>
+
+                <ul>
+
+                    <li>
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                        hello@lifeshieldai.sg
+
+                    </li>
+
+                    <li>
+
+                        <i class="fa-solid fa-phone"></i>
+
+                        +65 6123 4567
+
+                    </li>
+
+                    <li>
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        Singapore
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <p>
+
+                © 2026 LifeShield AI. Polytechnic FinTech Prototype.
+                Built for educational purposes.
+
+            </p>
+
+        </div>
 
     </div>
 
 </footer>
 
-<script src="app.js"></script>
+<!-- ========================= -->
+<!-- JAVASCRIPT -->
+<!-- ========================= -->
+
+<script src="js/app.js"></script>
 
 </body>
 
